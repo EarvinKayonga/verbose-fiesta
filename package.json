@@ -1,0 +1,21 @@
+{
+  "name": "tttt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "tsfmt --baseDir src",
+    "start": "ts-node src/index.ts",
+    "generate:stripe": "swagger-typescript-api -p https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.yaml -o ./src/stripe --axios --silent   --route-types   --union-enums   -r --clean-output",
+    "generate:pet": "swagger-typescript-api -p https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v2.0/yaml/petstore.yaml -o ./src/pet --axios --silent   --route-types   --union-enums   -r --clean-output",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "swagger-typescript-api": "^9.3.1",
+    "ts-node": "^10.4.0",
+    "typescript-formatter": "^7.2.2"
+  },
+  "dependencies": {}
+}
